@@ -17,6 +17,7 @@ import os
 # Current directory
 #current_dir = os.path.dirname(__file__)
 current_dir = os.path.dirname('C:/Users/PERFECTO/PROJET_7_avec_FLASK_Api/')
+current_dirO = os.path.dirname('C:/Users/PERFECTO/')
 
 #'C:/Users/User/'
 #PROJET_7_avec_FLASK_Api
@@ -69,9 +70,10 @@ def predict():
 
 		# Load template of JSON file containing columns name
 		# Schema name
-		schema_name = 'data/columns_set.json'
+		#schema_name = 'data/columns_set.json'
+		schema_name = 'columns_set.json'
 		# Directory where the schema is stored
-		schema_dir = os.path.join(current_dir, schema_name)
+		schema_dir = os.path.join(current_dirO, schema_name)
 		with open(schema_dir, 'r') as f:
 			cols =  json.loads(f.read())
 		schema_cols = cols['data_columns']
