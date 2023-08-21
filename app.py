@@ -34,7 +34,10 @@ def ValuePredictor(data = pd.DataFrame):
 	# Model name
 	model_name = 'bin/model_7.pkl'
 	# Directory where the model is stored
-	model_dir = os.path.join(current_dir, model_name)
+	# model_dir = os.path.join(current_dir, model_name)
+	model_dir = 'model_7.pkl'
+
+
 	# Load the model
 	loaded_model = joblib.load(open(model_dir, 'rb'))
 	# Predict the data
