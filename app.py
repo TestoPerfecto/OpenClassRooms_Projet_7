@@ -99,7 +99,7 @@ def predict():
 		schema_colsSS = reza['data_columns']
 
 		
-		current_dirO = os.path.dirname('C:/Users/PERFECTO/Documents/')
+		current_dirO = os.path.dirname('C:\Users\PERFECTO\Documents\')
 		schema_dir = os.path.join(current_dirO, schema_name)
 
 
