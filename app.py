@@ -73,7 +73,7 @@ def predict():
 		#schema_name = 'columns_set.json'
 				
 		# Directory where the schema is stored
-		schema_dir = os.path.join(current_dir, schema_name)
+		#schema_dir = os.path.join(current_dir, schema_name)
 		#schema_cols = pd.read_json(schema_dir).to_dict()['data_columns']
 
 		reza = {
