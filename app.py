@@ -70,16 +70,38 @@ def predict():
 		# Load template of JSON file containing columns name
 		# Schema name
 		#schema_name = 'data/columns_set.json'
-		schema_name = 'columns_set.json'
+		#schema_name = 'columns_set.json'
 				
 		# Directory where the schema is stored
 		schema_dir = os.path.join(current_dir, schema_name)
 		#schema_cols = pd.read_json(schema_dir).to_dict()['data_columns']
 
+		reza = {
+					"data_columns": {
+					"CODE_GENDER": "",
+					"CNT_CHILDREN": "",
+					"CNT_FAM_MEMBERS": "",
+					"NAME_FAMILY_STATUS": "",
+					"NAME_EDUCATION_TYPE": "",
+					"NAME_HOUSING_TYPE": "",
+					"FLAG_OWN_REALTY": "",
+					"FLAG_OWN_CAR": "",
+					"AMT_CREDIT_SUM": "",
+					"AMT_INCOME_TOTAL": "",
+					"NAME_INCOME_TYPE": "",
+					"NAME_CONTRACT_TYPE": "",
+					"CNT_INSTALMENT_FUTURE": "",
+					"CREDIT_ACTIVE": ""
 
-		with open(schema_dir, 'r') as f:
-			cols =  json.loads(f.read())
-		schema_cols = cols['data_columns']
+					}
+					}
+
+		schema_cols = reza['data_columns']
+
+
+		#with open(schema_dir, 'r') as f:
+			#cols =  json.loads(f.read())
+		#schema_cols = cols['data_columns']
 
 		
 		
