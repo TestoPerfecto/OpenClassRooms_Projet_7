@@ -69,7 +69,8 @@ def predict():
 
 		# Load template of JSON file containing columns name
 		# Schema name
-		schema_name = 'data/columns_set'
+		#schema_name = 'data/columns_set.json'
+		schema_name = 'columns_set.json'
 				
 		# Directory where the schema is stored
 		schema_dir = os.path.join(current_dir, schema_name)
