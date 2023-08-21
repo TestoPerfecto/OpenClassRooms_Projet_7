@@ -77,10 +77,10 @@ def predict():
 		#schema_cols = pd.read_json(schema_dir).to_dict()['data_columns']
 
 		# absolute path to this file
-		FILE_DIR = os.path.dirname(os.path.abspath('columns_set.json'))
+		#FILE_DIR = os.path.dirname(os.path.abspath('columns_set.json'))
 		# absolute path to this file's root directory
-		PARENT_DIR = os.path.join(FILE_DIR, os.pardir) 
-		schema_dir = os.path.join(PARENT_DIR, schema_name)
+		#PARENT_DIR = os.path.join(FILE_DIR, os.pardir) 
+		#schema_dir = os.path.join(PARENT_DIR, schema_name)
 
 
 
@@ -108,8 +108,9 @@ def predict():
 		schema_colsSS = reza['data_columns']
 
 		
-		current_dirO = os.path.dirname('C:/Users/PERFECTO/Documents')
+		#current_dirO = os.path.dirname('C:/Users/PERFECTO/Documents')
 		#schema_dir = os.path.join(current_dirO, schema_name)
+		schema_dir = schema_name
 
 
 		with open(schema_dir, 'r') as f:
