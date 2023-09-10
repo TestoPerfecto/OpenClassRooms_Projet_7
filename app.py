@@ -16,7 +16,7 @@ import os
 
 # Current directory
 #current_dir = os.path.dirname(__file__)
-current_dir = os.path.dirname('C:/Users/PERFECTO/PROJET_7_avec_FLASK_Api/')
+current_dir = os.path.dirname('C:/Users/PERFECTO/PROJET_7_avec_FLASK_TEST/')
 
 #'C:/Users/User/'
 #PROJET_7_avec_FLASK_Api
@@ -32,10 +32,10 @@ app.logger.setLevel(logging.ERROR)
 # Function
 def ValuePredictor(data = pd.DataFrame):
 	# Model name
-	model_name = 'bin/model_7.pkl'
+	model_name = 'bin/model_7_saved.pkl'
 	# Directory where the model is stored
 	# model_dir = os.path.join(current_dir, model_name)
-	model_dir = 'model_7.pkl'
+	model_dir = 'model_7_saved.pkl'
 
 
 	# Load the model
@@ -56,20 +56,21 @@ def predict():
 		# Get the data from form
 		name = request.form['name']
 		genre = request.form['genre']
-		education = request.form['education']
+		statut_du_contrat = request.form['statut_du_contrat']
 		nombre_enfants = request.form['nombre_enfants']
 		nombre_famille_membre = request.form['nombre_famille_membre']
-		statut_marital = request.form['statut_marital']
-		situation_logement = request.form['situation_logement']
+		type_de_client = request.form['type_de_client']
+		jours_depuis_dernier_credit = request.form['jours_depuis_dernier_credit']
 		situation_crédit = request.form['situation_crédit']
-		possession_maison = request.form['possession_maison']
 		possession_voiture = request.form['possession_voiture']
 		montant_total_crédits = request.form['montant_total_crédits']
 		revenu_total = request.form['revenu_total']
-		échéances_impayées = request.form['échéances_impayées']
-		origine_revenu = request.form['origine_revenu']
-		type_crédit = request.form['type_crédit']
+		rente_annuelle_crédit = request.form['rente_annuelle_crédit']
+		prix_biens_achetés = request.form['prix_biens_achetés']
+		durée_crédit_précédent = request.form['durée_crédit_précédent']
 
+
+		
 		# Load template of JSON file containing columns name
 		# Schema name
 		#schema_name = 'data/columns_set.json'
@@ -126,18 +127,18 @@ def predict():
 		# Parse the numerical columns
 		schema_cols['CNT_CHILDREN'] = nombre_enfants
 		schema_cols['CNT_FAM_MEMBERS'] = nombre_famille_membre
-		schema_cols['NAME_FAMILY_STATUS'] = statut_marital
-		schema_cols['NAME_HOUSING_TYPE'] = situation_logement
+		schema_cols['NAME_CONTRACT_STATUS'] = statut_du_contrat
+		schema_cols['CNT_PAYMENT'] = durée_crédit_précédent
 		schema_cols['CODE_GENDER'] = genre
 		schema_cols['CREDIT_ACTIVE'] = situation_crédit
-		schema_cols['NAME_EDUCATION_TYPE'] = education
-		schema_cols['FLAG_OWN_REALTY'] = possession_maison
+		schema_cols['AMT_GOODS_PRICE'] = prix_biens_achetés
+		schema_cols['AMT_ANNUITY_x'] = rente_annuelle_crédit
 		schema_cols['FLAG_OWN_CAR'] = possession_voiture
 		schema_cols['AMT_CREDIT_SUM'] = montant_total_crédits
 		schema_cols['AMT_INCOME_TOTAL'] = revenu_total
-		schema_cols['CNT_INSTALMENT_FUTURE'] = échéances_impayées
-		schema_cols['NAME_INCOME_TYPE'] = origine_revenu
-		schema_cols['NAME_CONTRACT_TYPE'] = type_crédit
+		schema_cols['DAYS_CREDIT'] = jours_depuis_dernier_credit
+		schema_cols['NAME_CLIENT_TYPE'] = type_de_client
+		
 
 		# Convert the JSON into data frame
 		df = pd.DataFrame(
