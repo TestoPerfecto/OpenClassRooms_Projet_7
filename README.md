@@ -11,3 +11,4 @@ L'idée derrière ce projet ML est de créer un modèle ML et une application We
 
 ### Modèle Web
 Pour le déploiement de l'apprentissage automatique, cette application utilise des modèles HTML et CSS de [colorlib](https://colorlib.com/wp/template/colorlib-regform-7/)# OpenClass_Projet_7_TEST
+# OpenClassE_Projet_7_TEST
