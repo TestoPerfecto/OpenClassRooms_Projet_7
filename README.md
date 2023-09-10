@@ -10,4 +10,4 @@ Le directeur de la banque SZE a identifié que parcourir les demandes de prêt p
 L'idée derrière ce projet ML est de créer un modèle ML et une application Web que la banque peut utiliser pour classer si un utilisateur peut se voir accorder un prêt ou non.
 
 ### Modèle Web
-Pour le déploiement de l'apprentissage automatique, cette application utilise des modèles HTML et CSS de [colorlib](https://colorlib.com/wp/template/colorlib-regform-7/)
+Pour le déploiement de l'apprentissage automatique, cette application utilise des modèles HTML et CSS de [colorlib](https://colorlib.com/wp/template/colorlib-regform-7/)# OpenClass_Projet_7_TEST
